@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\Api\V1\CategoryController;
+use App\Http\Controllers\Api\V1\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,5 +20,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('products',ProductController::class);
-Route::apiResource('categories',CategoryController::class);
+Route::prefix('v1')->middleware('guest:sanctum')->group(function () {
+    Route::apiResource('products',ProductController::class);
+    Route::apiResource('categories',CategoryController::class);
+});
+
+

@@ -1,20 +1,22 @@
 <?php
 
-namespace Tests\Feature\Category;
+namespace Tests\Feature\Api\V1\Product;
 
-use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-class CategoryControllerTest extends TestCase
+class ProductControllerTest extends TestCase
 {
     use RefreshDatabase;
 
+    private string $url="api/v1/products";
+
     public function test_index()
     {
-        Category::factory(5)->create();
-        $response = $this->getJson('api/categories');
+        Product::factory(5)->create();
+        $response = $this->getJson($this->url);
         $response->assertSuccessful();
         $response->assertHeader('content-type', 'application/json');
         $response->assertJsonCount(5);
@@ -22,59 +24,60 @@ class CategoryControllerTest extends TestCase
 
     public function test_store()
     {
-        $categoryData = [
-            'name' => 'new category',
+        $productData = [
+            'name' => 'new product',
+            'price' => 19.99,
         ];
 
-        $response = $this->postJson('api/categories', $categoryData);
+        $response = $this->postJson($this->url, $productData);
 
         $response->assertCreated();
         $response->assertHeader('content-type', 'application/json');
-        $response->assertJsonFragment($categoryData);
+        $response->assertJsonFragment($productData);
 
         // Verifica que el producto se haya almacenado en la base de datos si es necesario.
-        $this->assertDatabaseHas('categories', $categoryData);
+        $this->assertDatabaseHas('products', $productData);
     }
 
     public function test_show()
     {
-        $category = Category::factory()->create();
+        $product = Product::factory()->create();
 
-        $response = $this->getJson("api/categories/{$category->id}");
+        $response = $this->getJson("{$this->url}/{$product->id}");
         
         $response->assertSuccessful();
         $response->assertHeader('content-type', 'application/json');
-        $response->assertJson($category->toArray());
+        $response->assertJson($product->toArray());
     }
 
     public function test_update()
     {
-        $category = Category::factory()->create();
+        $product = Product::factory()->create();
 
         $updatedData = [
             'name' => 'Producto Actualizado',
+            'price' => 29.99,
         ];
 
-        $response = $this->putJson("api/categories/{$category->id}", $updatedData);
+        $response = $this->putJson("{$this->url}/{$product->id}", $updatedData);
 
         $response->assertSuccessful();
         $response->assertHeader('content-type', 'application/json');
         $response->assertJsonFragment($updatedData);
 
         // Verifica que el producto se haya actualizado en la base de datos si es necesario.
-        $this->assertDatabaseHas('categories', $updatedData);
+        $this->assertDatabaseHas('products', $updatedData);
     }
 
     public function test_destroy()
     {
-        $category = Category::factory()->create();
+        $product = Product::factory()->create();
 
-        $response = $this->deleteJson("api/categories/{$category->id}");
+        $response = $this->deleteJson("{$this->url}/{$product->id}");
 
         $response->assertNoContent();
 
         // Verifica que el producto se haya eliminado de la base de datos si es necesario.
-        $this->assertFalse(Category::where('id', $category->id)->exists());
+        $this->assertFalse(Product::where('id', $product->id)->exists());
     }
-
 }
