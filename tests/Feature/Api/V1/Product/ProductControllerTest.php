@@ -58,7 +58,14 @@ class ProductControllerTest extends TestCase
         
         $response->assertSuccessful();
         $response->assertHeader('content-type', 'application/json');
-        $response->assertJson($product->toArray());
+        $response->assertJsonStructure([
+            'data' => [
+                'name',
+                'price',
+                'creationDate',
+                'lastUpdated'
+            ],
+        ]);
     }
 
     public function test_update()

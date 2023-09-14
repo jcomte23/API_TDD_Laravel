@@ -22,7 +22,7 @@ Route::prefix('v1')->middleware('guest:sanctum')->group(function () {
     Route::post('login', [UserController::class,'login']);
 });
 
-Route::prefix('v1')->middleware('guest:sanctum')->group(function () {
+Route::prefix('v1')->middleware('auth:sanctum')->group(function () {
     Route::apiResource('products',ProductController::class);
     Route::apiResource('categories',CategoryController::class);
 });
