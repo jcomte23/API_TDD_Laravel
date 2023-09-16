@@ -17,21 +17,15 @@ class ProductControllerTest extends TestCase
 
     public function test_index()
     {
-        Sanctum::actingAs(
-            User::factory()->create()
-        );
         Product::factory(5)->create();
         $response = $this->getJson($this->url);
         $response->assertSuccessful();
         $response->assertHeader('content-type', 'application/json');
-        $response->assertJsonCount(5);
+        $response->assertJsonCount(5, 'data');
     }
 
     public function test_store()
     {
-        Sanctum::actingAs(
-            User::factory()->create()
-        );
         $productData = [
             'name' => 'new product',
             'price' => 19.99,
@@ -49,9 +43,6 @@ class ProductControllerTest extends TestCase
 
     public function test_show()
     {
-        Sanctum::actingAs(
-            User::factory()->create()
-        );
         $product = Product::factory()->create();
 
         $response = $this->getJson("{$this->url}/{$product->id}");
@@ -70,9 +61,6 @@ class ProductControllerTest extends TestCase
 
     public function test_update()
     {
-        Sanctum::actingAs(
-            User::factory()->create()
-        );
         $product = Product::factory()->create();
 
         $updatedData = [
@@ -92,9 +80,6 @@ class ProductControllerTest extends TestCase
 
     public function test_destroy()
     {
-        Sanctum::actingAs(
-            User::factory()->create()
-        );
         $product = Product::factory()->create();
 
         $response = $this->deleteJson("{$this->url}/{$product->id}");

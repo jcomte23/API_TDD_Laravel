@@ -17,10 +17,6 @@ class CategoryControllerTest extends TestCase
 
     public function test_index()
     {
-        Sanctum::actingAs(
-            User::factory()->create()
-        );
-
         Category::factory(5)->create();
         $response = $this->getJson($this->url);
         $response->assertSuccessful();
@@ -30,10 +26,6 @@ class CategoryControllerTest extends TestCase
 
     public function test_store()
     {
-        Sanctum::actingAs(
-            User::factory()->create()
-        );
-
         $categoryData = [
             'name' => 'new category',
         ];
@@ -50,9 +42,6 @@ class CategoryControllerTest extends TestCase
 
     public function test_show()
     {
-        Sanctum::actingAs(
-            User::factory()->create()
-        );
         $category = Category::factory()->create();
 
         $response = $this->getJson("{$this->url}/{$category->id}");
@@ -64,9 +53,6 @@ class CategoryControllerTest extends TestCase
 
     public function test_update()
     {
-        Sanctum::actingAs(
-            User::factory()->create()
-        );
         $category = Category::factory()->create();
 
         $updatedData = [
@@ -85,9 +71,6 @@ class CategoryControllerTest extends TestCase
 
     public function test_destroy()
     {
-        Sanctum::actingAs(
-            User::factory()->create()
-        );
         $category = Category::factory()->create();
 
         $response = $this->deleteJson("{$this->url}/{$category->id}");
