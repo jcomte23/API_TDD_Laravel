@@ -53,6 +53,7 @@ class ProductControllerTest extends TestCase
             'data' => [
                 'name',
                 'price',
+                'category',
                 'creationDate',
                 'lastUpdated'
             ],

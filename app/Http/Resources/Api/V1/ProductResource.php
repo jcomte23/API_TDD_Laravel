@@ -8,16 +8,14 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class ProductResource extends JsonResource
 {
-    /**
-     * Transform the resource into an array.
-     *
-     * @return array<string, mixed>
-     */
     public function toArray(Request $request): array
     {
+        $category = $this->category ? $this->category->name : null; 
+
         return [
             'name' => (string) $this->name,
             'price' => (float) $this->price,
+            'category' => (string) $category,
             'creationDate' => (string) $this->created_at->diffForHumans(),
             'lastUpdated' => (string) $this->updated_at->format('Y-m-d H:i:s')
         ];
