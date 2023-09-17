@@ -17,12 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::prefix('v1')->middleware('guest:sanctum')->group(function () {
-    Route::post('login', [UserController::class,'login']);
+Route::get('/', function () {
+    return ['Laravel' => app()->version()];
 });
 
-Route::prefix('v1')->middleware('guest:sanctum')->group(function () {
+Route::prefix('v1')->middleware('guest:sanctum')->group(function () { 
+    Route::post('login', [UserController::class,'login']);
     Route::apiResource('products',ProductController::class);
     Route::apiResource('categories',CategoryController::class);
 });
