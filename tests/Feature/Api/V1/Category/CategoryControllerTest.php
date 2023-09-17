@@ -15,7 +15,7 @@ class CategoryControllerTest extends TestCase
 
     private string $url="api/v1/categories";
 
-    public function test_index()
+    public function test_index_method_lists_the_categories()
     {
         Category::factory(5)->create();
         $response = $this->getJson($this->url);
@@ -24,7 +24,7 @@ class CategoryControllerTest extends TestCase
         $response->assertJsonCount(5);
     }
 
-    public function test_store()
+    public function test_store_method_saves_a_category()
     {
         $categoryData = [
             'name' => 'new category',
@@ -40,7 +40,7 @@ class CategoryControllerTest extends TestCase
         $this->assertDatabaseHas('categories', $categoryData);
     }
 
-    public function test_show()
+    public function test_show_method_displays_a_category()
     {
         $category = Category::factory()->create();
 
@@ -51,7 +51,7 @@ class CategoryControllerTest extends TestCase
         $response->assertJson($category->toArray());
     }
 
-    public function test_update()
+    public function test_update_method_updates_a_category()
     {
         $category = Category::factory()->create();
 
@@ -69,7 +69,7 @@ class CategoryControllerTest extends TestCase
         $this->assertDatabaseHas('categories', $updatedData);
     }
 
-    public function test_destroy()
+    public function test_destroy_method_eliminates_a_category()
     {
         $category = Category::factory()->create();
 
