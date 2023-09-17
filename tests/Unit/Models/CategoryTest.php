@@ -4,7 +4,6 @@ namespace Tests\Unit\Models;
 
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Collection;
-//use PHPUnit\Framework\TestCase;
 use Tests\TestCase;
 
 class CategoryTest extends TestCase
