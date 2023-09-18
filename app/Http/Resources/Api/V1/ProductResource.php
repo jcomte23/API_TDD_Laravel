@@ -13,9 +13,9 @@ class ProductResource extends JsonResource
         $category = $this->category ? $this->category->name : null; 
 
         return [
-            'name' => (string) $this->name,
+            'name' => (string) strtolower($this->name),
             'price' => (float) $this->price,
-            'category' => (string) $category,
+            'category' => (string) strtolower($this->name),
             'creationDate' => (string) $this->created_at->diffForHumans(),
             'lastUpdated' => (string) $this->updated_at->format('Y-m-d H:i:s')
         ];
