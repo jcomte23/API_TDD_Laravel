@@ -1,9 +1,29 @@
 {
-    "name": "laravel/laravel",
+    "name": "jcomte23/api_tdd_laravel",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "API REST creada con Laravel mediante la metodología de desarrollo TDD (Test-Driven Development)",
+    "keywords": [
+        "laravel",
+        "api",
+        "rest-api",
+        "php",
+        "web-development",
+        "backend",
+        "database",
+        "framework",
+        "mvc",
+        "laravel-project",
+        "laravel-application"
+    ],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Javier Cómbita Téllez",
+            "email": "jcomte23@outlook.com",
+            "homepage": "https://javiercombita.com",
+            "role": "Lead Developer"
+        }
+    ],
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2",

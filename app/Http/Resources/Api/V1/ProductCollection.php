@@ -14,12 +14,19 @@ class ProductCollection extends ResourceCollection
         return [
             'data' => $this->collection,
             'meta' => [
+                "api_version" => "v1",
+                "content_type" => "JSON",
+                "organization" => "jcomte23",               
+                "response_description" => "List of products",
                 'authors' => [
-                    'Javier Cómbita Téllez'
+                    [
+                        "name" => "Javier Cómbita Téllez",
+                        "email" => "jcomte23@outlook.com",
+                        "homepage" => "https://javiercombita.com",
+                        "role" => "Lead Developer"
+                    ]
                 ],
-                'organization' => 'Jcomte23',
             ],
-            'type' => 'products'
         ];
     }
 }
