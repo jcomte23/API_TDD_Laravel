@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -48,6 +49,11 @@ class Product extends Model
     | SCOPES
     |--------------------------------------------------------------------------
     */
+
+    public function scopeListProducts(Builder $query)
+    {
+        $query->orderBy('updated_at', 'desc');
+    }
 
     /*
     |--------------------------------------------------------------------------

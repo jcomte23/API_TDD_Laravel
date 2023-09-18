@@ -21,7 +21,6 @@ class ProductFactory extends Factory
             "category_id"=>Category::factory(),
             "name"=>fake()->name(),
             "price"=>fake()->numberBetween(1000,1000000)
-
         ];
     }
 }
