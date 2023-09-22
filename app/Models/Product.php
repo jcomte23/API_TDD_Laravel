@@ -57,7 +57,7 @@ class Product extends Model
 
     public function scopeListTheFirst1000Products(Builder $query)
     {
-        $query->take(1000);
+        $query->whereNotNull('category_id')->take(1000);
     }
 
     /*
