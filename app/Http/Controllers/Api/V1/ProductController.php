@@ -15,13 +15,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-
+        $products = Product::ListTheFirst1000Products()->get();
         $productResources = ProductResource::collection($products);
     
         // Obtén los datos sin encapsulamiento de "data"
         $responseData = $productResources->toArray(request());
-    
         return response()->json($responseData);
     }
 

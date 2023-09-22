@@ -55,6 +55,11 @@ class Product extends Model
         $query->orderBy('id');
     }
 
+    public function scopeListTheFirst1000Products(Builder $query)
+    {
+        $query->take(1000);
+    }
+
     /*
     |--------------------------------------------------------------------------
     | ACCESORS
