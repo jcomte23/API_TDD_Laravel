@@ -24,7 +24,7 @@ class ProductControllerTest extends TestCase
         $response->assertHeader('content-type', 'application/json');
         $response->assertJsonCount(5);
         $response->assertJsonStructure([
-            '*' => ['id','name', 'price'],
+            '*' => ['id','name', 'price','category']
         ]);
     }
 
@@ -55,8 +55,8 @@ class ProductControllerTest extends TestCase
                 'name',
                 'price',
                 'category',
-                'creationDate',
-                'lastUpdated'
+                'created_at',
+                'updated_at'
             ],
         ]);
     }
