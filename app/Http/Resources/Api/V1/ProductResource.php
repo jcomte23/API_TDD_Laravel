@@ -17,8 +17,8 @@ class ProductResource extends JsonResource
             'name' => (string) strtolower($this->name),
             'price' => (float) $this->price,
             'category' => (string) $category,
-            'creationDate' => (string) $this->created_at->diffForHumans(),
-            'lastUpdated' => (string) $this->updated_at->format('Y-m-d H:i:s')
+            'creationDate' => (string) $this->created_at,
+            'lastUpdated' => (string) $this->updated_at
         ];
     }
 }
