@@ -54,7 +54,12 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return new ProductResource($product);
+        $productResource = new ProductResource($product);
+        
+        // Obtén los datos sin encapsulamiento de "data"
+        $responseData = $productResource->toArray(request());
+    
+        return response()->json($responseData);
     }
 
     /**
