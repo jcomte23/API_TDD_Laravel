@@ -16,8 +16,38 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products=Product::all();
-        return $products;
+        $products = Product::latest()->get();
+
+        // Transformar la respuesta para que coincida con el formato deseado
+        $transformedProducts = $products->map(function ($product) {
+
+            if ($product->category == null) {
+                return [
+                    'id' => $product->id,
+                    'name' => $product->name,
+                    'price' => $product->price,
+                    'created_at' => $product->created_at,
+                    'updated_at' => $product->updated_at,
+                    'category' => null
+                ];
+            } else {
+                return [
+                    'id' => $product->id,
+                    'name' => $product->name,
+                    'price' => $product->price,
+                    'created_at' => $product->created_at,
+                    'updated_at' => $product->updated_at,
+                    'category' => [
+                        'id' => $product->category->id,
+                        'name' => $product->category->name,
+                        'created_at' => $product->category->created_at,
+                        'updated_at' => $product->category->updated_at,
+                    ]
+                ];
+            }
+        });
+
+        return $transformedProducts;
     }
 
     /**
@@ -25,7 +55,7 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        $product=Product::create($request->all());
+        $product = Product::create($request->all());
         return response()->json($product, 201);
     }
 
