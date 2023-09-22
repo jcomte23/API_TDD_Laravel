@@ -15,28 +15,14 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::latest()->get();
+        $products = Product::all();
 
-        $formattedProducts = $products->map(function ($product) {
-
-            return [
-                'id' => $product->id,
-                'name' => $product->name,
-                'price' => $product->price,
-                'created_at' => $product->created_at,
-                'updated_at' => $product->updated_at,
-                'category' => $product->category
-                    ? [
-                        'id' => $product->category->id,
-                        'name' => $product->category->name,
-                        'created_at' => $product->category->created_at,
-                        'updated_at' => $product->category->updated_at,
-                    ]
-                    : null,
-            ];
-        });
-
-        return response()->json($formattedProducts);
+        $productResources = ProductResource::collection($products);
+    
+        // Obtén los datos sin encapsulamiento de "data"
+        $responseData = $productResources->toArray(request());
+    
+        return response()->json($responseData);
     }
 
     /**
@@ -55,7 +41,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         $productResource = new ProductResource($product);
-        
+
         // Obtén los datos sin encapsulamiento de "data"
         $responseData = $productResource->toArray(request());
     
