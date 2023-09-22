@@ -52,7 +52,7 @@ class Product extends Model
 
     public function scopeListProducts(Builder $query)
     {
-        $query->orderBy('updated_at', 'desc');
+        $query->orderBy('id');
     }
 
     /*
