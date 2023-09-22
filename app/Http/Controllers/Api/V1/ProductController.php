@@ -16,7 +16,27 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::latest()->get();
-        return response()->json($products,200);
+
+        $formattedProducts = $products->map(function ($product) {
+
+            return [
+                'id' => $product->id,
+                'name' => $product->name,
+                'price' => $product->price,
+                'created_at' => $product->created_at,
+                'updated_at' => $product->updated_at,
+                'category' => $product->category
+                    ? [
+                        'id' => $product->category->id,
+                        'name' => $product->category->name,
+                        'created_at' => $product->category->created_at,
+                        'updated_at' => $product->category->updated_at,
+                    ]
+                    : null,
+            ];
+        });
+
+        return response()->json($formattedProducts);
     }
 
     /**
