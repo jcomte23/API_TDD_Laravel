@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api\V2;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\Api\V1\ProductCollection;
+use App\Http\Resources\Api\V2\ProductCollection;
 use App\Models\Product;
 use Illuminate\Http\Request;
 

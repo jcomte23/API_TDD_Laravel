@@ -10,15 +10,22 @@ class ProductResource extends JsonResource
 {
     public function toArray(Request $request): array
     {
-        $category = $this->category ? $this->category->name : null; 
+        $category = $this->category ?? null;
 
         return [
-            'id' => (int) $this->id,
-            'name' => (string) strtolower($this->name),
-            'price' => (float) $this->price,
-            'category' => (string) $category,
-            'creationDate' => (string) $this->created_at,
-            'lastUpdated' => (string) $this->updated_at
+            'id' => $this->id,
+            'name' => $this->name,
+            'price' => $this->price,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
+            'category' => $category
+                ? [
+                    'id' => $category->id,
+                    'name' => $category->name,
+                    'created_at' => $category->created_at,
+                    'updated_at' => $category->updated_at,
+                ]
+                : null
         ];
     }
 }

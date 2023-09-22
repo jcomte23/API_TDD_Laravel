@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
-use App\Http\Resources\Api\V1\ProductCollection;
 use App\Http\Resources\Api\V1\ProductResource;
 use App\Models\Product;
 
@@ -17,37 +16,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::latest()->get();
-
-        // Transformar la respuesta para que coincida con el formato deseado
-        $transformedProducts = $products->map(function ($product) {
-
-            if ($product->category == null) {
-                return [
-                    'id' => $product->id,
-                    'name' => $product->name,
-                    'price' => $product->price,
-                    'created_at' => $product->created_at,
-                    'updated_at' => $product->updated_at,
-                    'category' => null
-                ];
-            } else {
-                return [
-                    'id' => $product->id,
-                    'name' => $product->name,
-                    'price' => $product->price,
-                    'created_at' => $product->created_at,
-                    'updated_at' => $product->updated_at,
-                    'category' => [
-                        'id' => $product->category->id,
-                        'name' => $product->category->name,
-                        'created_at' => $product->category->created_at,
-                        'updated_at' => $product->category->updated_at,
-                    ]
-                ];
-            }
-        });
-
-        return $transformedProducts;
+        return response()->json($products,200);
     }
 
     /**
