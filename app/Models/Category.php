@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -49,6 +50,11 @@ class Category extends Model
     | SCOPES
     |--------------------------------------------------------------------------
     */
+
+    public function scopeListTheFirst1000Categories(Builder $query)
+    {
+        $query->take(1000);
+    }
 
     /*
     |--------------------------------------------------------------------------
