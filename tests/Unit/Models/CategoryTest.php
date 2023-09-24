@@ -8,7 +8,7 @@ use Tests\TestCase;
 
 class CategoryTest extends TestCase
 {
-    public function test_has_many_products()
+    public function test_a_category_has_many_products()
     {
         $category=new Category();
         $this->assertInstanceOf(Collection::class,$category->products);

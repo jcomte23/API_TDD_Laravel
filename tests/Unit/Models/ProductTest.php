@@ -11,7 +11,7 @@ class ProductTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_belongs_to_category()
+    public function test_a_product_belongs_to_category()
     {
         $product = Product::factory()->create();
         $this->assertInstanceOf(Category::class, $product->category);

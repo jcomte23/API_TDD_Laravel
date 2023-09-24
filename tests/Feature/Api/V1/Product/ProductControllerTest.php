@@ -15,7 +15,7 @@ class ProductControllerTest extends TestCase
 
     private string $url = "api/v1/products";
 
-    public function test_it_can_list_products()
+    public function test_index_method_lists_the_products()
     {
         Product::factory(5)->create();
         $response = $this->getJson($this->url);
@@ -28,7 +28,7 @@ class ProductControllerTest extends TestCase
         ]);
     }
 
-    public function test_it_can_create_a_product()
+    public function test_store_method_saves_a_product()
     {
         $productData = [
             'name' => 'new product',
@@ -42,7 +42,7 @@ class ProductControllerTest extends TestCase
         $this->assertDatabaseHas('products', $productData);
     }
 
-    public function test_it_can_show_a_product()
+    public function test_show_method_displays_a_product()
     {
         $product = Product::factory()->create();
 
@@ -59,7 +59,7 @@ class ProductControllerTest extends TestCase
         ]);
     }
 
-    public function test_it_can_update_a_product()
+    public function test_update_method_updates_a_product()
     {
         $product = Product::factory()->create();
 
@@ -76,7 +76,7 @@ class ProductControllerTest extends TestCase
         $this->assertDatabaseHas('products', $updatedData);
     }
 
-    public function test_it_can_delete_a_product()
+    public function test_destroy_method_eliminates_a_product()
     {
         $product = Product::factory()->create();
 
