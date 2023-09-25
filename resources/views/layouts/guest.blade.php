@@ -63,16 +63,22 @@
                         href="#">About</a>
                 </div>
 
-                <div class="flex justify-center md:block">
-                    <div class="flex items-center mt-2 -mx-2 sm:mt-0">
-                        <a href="#"
-                            class="px-3 py-1 text-sm font-semibold transition-colors duration-300 transform border-2 border-black rounded-md dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white ">Sign
-                            In</a>
-                        <a href="#"
-                            class="px-3 py-1 mx-2 text-sm font-semibold text-white transition-colors duration-300 transform bg-black rounded-md border-2 border-black hover:bg-white hover:text-black dark:border-white">Sign
-                            Up</a>
+                @if (Route::has('login'))
+                    <div class="flex justify-center md:block">
+                        @auth
+                            <a href="{{ url('/dashboard') }}"
+                                class="px-3 py-1 text-sm font-semibold transition-colors duration-300 transform border-2 border-black rounded-md dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white">Dashboard</a>
+                        @else
+                            <a href="{{ route('login') }}"
+                                class="px-3 py-1 text-sm font-semibold transition-colors duration-300 transform border-2 border-black rounded-md dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white ">Log
+                                In</a>
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}"
+                                    class="px-3 py-1 mx-2 text-sm font-semibold text-white transition-colors duration-300 transform bg-black rounded-md border-2 border-black hover:bg-white hover:text-black dark:border-white">Register</a>
+                            @endif
+                        @endauth
                     </div>
-                </div>
+                @endif
             </div>
         </div>
     </nav>
