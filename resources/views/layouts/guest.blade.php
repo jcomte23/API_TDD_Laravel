@@ -23,13 +23,12 @@
         id="modoDarkBtn" style="z-index: 9999;"><i class="bi bi-moon-stars-fill text-xl"></i>
     </button>
 
-    <nav x-data="{ isOpen: false }" class="relative bg-white shadow dark:bg-gray-800">
+    <nav x-data="{ isOpen: false }" class="fixed top-0 w-full bg-white shadow dark:bg-gray-800">
         <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
             <div class="flex items-center justify-between">
                 <a href="{{ route('home') }}">
-                    <img class="w-auto h-6 sm:h-7" src="{{ asset('favicon.ico') }}" alt="">
+                    <img class="w-auto h-6 sm:h-7" src="{{ asset('img/favicon/light.png') }}" alt="">
                 </a>
-
                 <!-- Mobile menu button -->
                 <div class="flex lg:hidden">
                     <button x-cloak @click="isOpen = !isOpen" type="button"
@@ -69,7 +68,7 @@
         </div>
     </nav>
 
-    <div class="font-sans text-gray-900 dark:text-gray-100 dark:bg-gray-900 antialiased">
+    <div class="font-sans w-full text-gray-900 dark:text-gray-100 dark:bg-gray-900 antialiased">
         {{ $slot }}
     </div>
 
@@ -77,7 +76,7 @@
         <div class="container px-6 py-8 mx-auto">
             <div class="flex flex-col items-center text-center">
                 <a href="#">
-                    <img class="w-auto h-24" src="{{ asset('img/logo.png') }}" alt="">
+                    <img class="w-auto h-24" src="{{ asset('img/logo/light.png') }}" alt="">
                 </a>
             </div>
 
