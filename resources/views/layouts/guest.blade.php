@@ -76,7 +76,7 @@
         <div class="container px-6 py-8 mx-auto">
             <div class="flex flex-col items-center text-center">
                 <a href="#">
-                    <img class="w-auto h-24" src="{{ asset('img/logo/light.png') }}" alt="">
+                    <img class="logo w-auto h-24" alt="">
                 </a>
             </div>
 

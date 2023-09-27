@@ -14,10 +14,10 @@ class UserTest extends TestCase
     {
         // Crear un usuario con un correo electrónico en mayúsculas
         $usuario = User::factory()->create([
-            'email' => 'CorreoEnMayusculas@example.com',
+            'email' => 'CORREO@EXAMPLE.COM',
         ]);
 
         // Verificar que el correo electrónico se haya establecido en minúsculas
-        $this->assertEquals('correoenmayusculas@example.com', $usuario->email);
+        $this->assertEquals('correo@example.com', $usuario->email);
     }
 }
