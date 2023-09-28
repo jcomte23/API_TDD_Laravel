@@ -1,8 +1,12 @@
 {
     "All Rights Reserved":"Todos los derechos reservados",
+    "Easy to use":"Facilidad de uso",
     "Elegant Dark Mode":"Elegante modo oscuro",
     "Home":"Home",
+    "Simple and clean designs":"Diseños sencillos y limpios",
+    "TextCardEasyToUse":"Con la API REST, simplificamos cada paso para que pueda trabajar con eficiencia y eficacia. Desde la integración inicial hasta el mantenimiento continuo, te proporcionamos las herramientas que necesitas para que tu experiencia no tenga complicaciones.",
     "TextCardElegantDarkMode":"La elegante interfaz en modo oscuro está diseñada para deleitar tus sentidos y proporcionarte comodidad en cualquier entorno, tanto de día como de noche.Disfruta de una estética moderna y cautivadora mientras exploras todas las posibilidades que te ofrece la API.",
+    "TextCardSimpleAndCleanDesigns":"Hemos eliminado el desorden innecesario para ofrecerte una experiencia sin distracciones. Cada aspecto de nuestra API REST ha sido meticulosamente diseñado para ser intuitivo y fácil de entender. Encajará perfectamente en tus proyectos sin importar la complejidad, manteniendo la elegancia y la claridad en el centro de todo.",
 
 
     "(and :count more error)": "(y :count error más)",

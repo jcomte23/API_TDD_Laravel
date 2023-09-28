@@ -30,14 +30,10 @@
                         <i class="bi bi-puzzle text-4xl"></i>
                     </span>
 
-                    <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Easy to use
-                    </h1>
+                    <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">{{ __('Easy to use')}}</h1>
 
                     <p class="text-gray-500 dark:text-gray-300">
-                        Facilidad de uso es nuestro lema. Con nuestra API REST, simplificamos cada paso para que puedas
-                        trabajar de manera eficiente y efectiva. Desde la integración inicial hasta el mantenimiento
-                        continuo, te proporcionamos las herramientas necesarias para que tu experiencia sea sin
-                        complicaciones.
+                        {{ __('TextCardEasyToUse')}}
                     </p>
                 </div>
 
@@ -46,14 +42,11 @@
                         <i class="bi bi-stars text-4xl"></i>
                     </span>
 
-                    <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Simple & clean designs
+                    <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">{{ __('Simple and clean designs')}}
                     </h1>
 
                     <p class="text-gray-500 dark:text-gray-300">
-                        Hemos eliminado el desorden innecesario para ofrecerte una experiencia sin distracciones. Cada
-                        aspecto de nuestra API REST ha sido meticulosamente diseñado para ser intuitivo y fácil de
-                        entender. Encajará perfectamente en tus proyectos sin importar la complejidad, manteniendo la
-                        elegancia y la claridad en el centro de todo.
+                        {{ __('TextCardSimpleAndCleanDesigns')}}
                     </p>
                 </div>
 
