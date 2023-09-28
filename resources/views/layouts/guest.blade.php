@@ -41,7 +41,7 @@
                 class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
                 <div class="flex flex-col md:flex-row md:mx-6">
                     <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
-                        href="{{ route('home') }}">Home</a>
+                        href="{{ route('home') }}">{{ __('Home') }}</a>
                 </div>
                 <div x-data="{ isOpen: true }" x-init="() => { isOpen = false }" class="relative inline-block mr-3">
                     <!-- Dropdown toggle button -->
@@ -117,8 +117,7 @@
             <hr class="my-6 border-black md:my-10 dark:border-gray-700" />
 
             <div class="flex flex-col items-center sm:flex-row sm:justify-between">
-                <p class="text-sm dark:text-gray-300">© Copyright 2023 Javier Cómbita Téllez. All Rights
-                    Reserved.</p>
+                <p class="text-sm dark:text-gray-300">© Copyright 2023 Javier Cómbita Téllez. {{ __('All Rights Reserved') }}</p>
 
                 <div class="flex -mx-2">
                     <a href="https://twitter.com/jcomte23" target="_blank"
