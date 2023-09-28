@@ -27,7 +27,7 @@
         <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
             <div class="flex items-center justify-between">
                 <a href="{{ route('home') }}">
-                    <img class="w-auto h-6 sm:h-7" src="{{ asset('img/favicon/light.png') }}" alt="">
+                    <img id="logo" class="w-auto h-6 sm:h-7" alt="logo">
                 </a>
                 <!-- Mobile menu button -->
                 <div class="flex lg:hidden">
@@ -68,15 +68,15 @@
         </div>
     </nav>
 
-    <div class="font-sans w-full text-gray-900 dark:text-gray-100 dark:bg-gray-900 antialiased">
+    <div class="font-sans w-full bg-gray-100 text-gray-900 dark:text-gray-100 dark:bg-gray-900 antialiased">
         {{ $slot }}
     </div>
 
     <footer class="bg-gray-100 dark:bg-gray-900">
         <div class="container px-6 py-8 mx-auto">
             <div class="flex flex-col items-center text-center">
-                <a href="#">
-                    <img class="logo w-auto h-24" alt="">
+                <a href="https://javiercombita.com" target="_black">
+                    <img id="marca" class="w-auto h-24" alt="marca">
                 </a>
             </div>
 
