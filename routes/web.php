@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\PersonalSettings;
+use App\Http\Controllers\Web\PersonalSettings;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Rules\Role;
 
