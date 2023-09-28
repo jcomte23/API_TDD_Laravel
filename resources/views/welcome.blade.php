@@ -55,17 +55,12 @@
                         <i class="bi bi-phone text-3xl"></i>
                     </span>
 
-                    <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Fully Responsive
-                        Components
+                    <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">
+                        {{ __('Fully Responsive Components')}}
                     </h1>
 
                     <p class="text-gray-500 dark:text-gray-300">
-                        Nuestros componentes son totalmente responsivos, lo que significa que se adaptan perfectamente a
-                        cualquier dispositivo o pantalla. Ya sea que estés accediendo a nuestra API REST desde un
-                        teléfono móvil, una tableta o una computadora de escritorio, disfrutarás de una experiencia sin
-                        fisuras. Nos enorgullecemos de ofrecer componentes que se ajustan y funcionan con fluidez en
-                        cualquier entorno, brindándote la versatilidad que necesitas para hacer que tus aplicaciones
-                        destaquen.
+                        {{ __('TextCardFullyResponsiveComponents')}}
                     </p>
                 </div>
             </div>

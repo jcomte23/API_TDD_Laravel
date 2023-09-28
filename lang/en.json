@@ -2,12 +2,13 @@
     "All Rights Reserved":"All Rights Reserved",
     "Easy to use":"Easy to use",
     "Elegant Dark Mode":"Elegant Dark Mode",
+    "Fully Responsive Components":"Fully Responsive Components",
     "Home":"Home",
     "Simple and clean designs":"Simple and clean designs",
     "TextCardEasyToUse":"With the REST API, we simplify every step so you can work efficiently and effectively. From initial integration to ongoing maintenance, we provide you with the tools you need to make your experience hassle-free.",
     "TextCardElegantDarkMode":"The elegant dark mode interface is designed to delight your senses and provide comfort in any environment, both day and night. Enjoy a modern and captivating aesthetic while exploring all the possibilities offered by the API.",
     "TextCardSimpleAndCleanDesigns":"We've eliminated unnecessary clutter to provide you with a distraction-free experience. Every aspect of our REST API has been meticulously designed to be intuitive and easy to understand. It will fit seamlessly into your projects no matter the complexity, keeping elegance and clarity at the center of it all.",
-
+    "TextCardFullyResponsiveComponents":"Our components are fully responsive, which means they adapt perfectly to any device or screen for a seamless experience. We pride ourselves on delivering components that fit and run smoothly in any environment, giving you the versatility you need to make your apps stand out.",
 
     "(and :count more error)": "(and :count more error)",
     "(and :count more errors)": "(and :count more errors)",
