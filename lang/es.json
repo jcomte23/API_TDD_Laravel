@@ -1,6 +1,9 @@
 {
     "All Rights Reserved":"Todos los derechos reservados",
+    "Elegant Dark Mode":"Elegante modo oscuro",
     "Home":"Home",
+    "TextCardElegantDarkMode":"La elegante interfaz en modo oscuro está diseñada para deleitar tus sentidos y proporcionarte comodidad en cualquier entorno, tanto de día como de noche.Disfruta de una estética moderna y cautivadora mientras exploras todas las posibilidades que te ofrece la API.",
+
 
     "(and :count more error)": "(y :count error más)",
     "(and :count more errors)": "(y :count errores más)",

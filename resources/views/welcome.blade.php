@@ -18,13 +18,10 @@
                     <span class="inline-block text-blue-500 dark:text-blue-400">
                         <i class="bi bi-fire text-4xl"></i>
                     </span>
-                    <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Elegant Dark Mode</h1>
+                    <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">{{ __('Elegant Dark Mode')}}</h1>
 
                     <p class="text-gray-500 dark:text-gray-300">
-                        Nuestra elegante interfaz en modo oscuro está diseñada para deleitar
-                        tus sentidos y brindarte comodidad en cualquier entorno, día o noche; Disfruta de una estética
-                        moderna y cautivadora mientras exploras todas las posibilidades que nuestra API tiene para
-                        ofrecer
+                        {{ __('TextCardElegantDarkMode')}}
                     </p>
                 </div>
 
