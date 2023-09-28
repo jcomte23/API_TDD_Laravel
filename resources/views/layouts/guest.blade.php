@@ -8,10 +8,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -64,9 +60,10 @@
 
                         <a href="{{ route('lang', 'es') }}"
                             class="flex items-center px-3 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
-                            <i class="bi bi-person-circle w-5 h-5 mx-1"></i>
+                            <img src="img/flags/es.svg"
+                                    alt="España" width="50">
                             <span class="mx-1">
-                                español
+                                {{ __('spanish') }}
                             </span>
                         </a>
 
@@ -74,21 +71,15 @@
 
                         <a href="{{ route('lang', 'en') }}"
                             class="flex items-center p-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
-                            <i class="bi bi-building w-5 h-5 mx-1"></i>
+                            <img src="img/flags/us.svg"
+                                    alt="EEUU" width="50">
                             <span class="mx-1">
-                                ingles
+                                {{ __('english') }}
                             </span>
                         </a>
 
                         <hr class="border-gray-200 dark:border-gray-700 ">
 
-                        <a href="#"
-                            class="flex items-center p-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
-                            <i class="bi bi-question-circle w-5 h-5 mx-1"></i>
-                            <span class="mx-1">
-                                Help
-                            </span>
-                        </a>
                     </div>
                 </div>
 
