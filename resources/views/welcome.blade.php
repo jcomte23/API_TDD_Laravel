@@ -87,7 +87,7 @@
                                 <p class="leading-relaxed mb-3">Explora todos los endpoints del modulo de productos</p>
                                 <div class="flex items-center flex-wrap ">
                                     <a href="#"
-                                        class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">View Docs
+                                        class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">{{ __('View Docs') }}
                                         <i class="bi bi-arrow-right text-2xl ml-2"></i>
                                     </a>
                                 </div>
@@ -105,7 +105,7 @@
                                 <p class="leading-relaxed mb-3">Explora todos los endpoints del modulo de productos</p>
                                 <div class="flex items-center flex-wrap ">
                                     <a href="#"
-                                        class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">View Docs
+                                        class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">{{ __('View Docs') }}
                                         <i class="bi bi-arrow-right text-2xl ml-2"></i>
                                     </a>
                                 </div>
@@ -123,7 +123,7 @@
                                 <p class="leading-relaxed mb-3">Explora todos los endpoints del modulo de productos</p>
                                 <div class="flex items-center flex-wrap ">
                                     <a href="#"
-                                        class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">View Docs
+                                        class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">{{ __('View Docs') }}
                                         <i class="bi bi-arrow-right text-2xl ml-2"></i>
                                     </a>
                                 </div>
