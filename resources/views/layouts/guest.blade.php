@@ -60,7 +60,7 @@
                             class="flex items-center px-3 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
                             <img src="img/flags/es.svg" alt="España" width="50">
                             <span class="mx-1">
-                                {{ __('spanish') }}
+                                {{ __('Spanish') }}
                             </span>
                         </a>
 
@@ -70,7 +70,7 @@
                             class="flex items-center p-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
                             <img src="img/flags/us.svg" alt="EEUU" width="50">
                             <span class="mx-1">
-                                {{ __('english') }}
+                                {{ __('English') }}
                             </span>
                         </a>
 
