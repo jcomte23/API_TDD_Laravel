@@ -84,7 +84,7 @@
                             <div class="p-6">
                                 <h1 class="title-font text-lg font-medium text-gray-900 mb-3 dark:text-white">{{ __('Products') }}
                                 </h1>
-                                <p class="leading-relaxed mb-3">Explora todos los endpoints del modulo de productos</p>
+                                <p class="leading-relaxed mb-3">{{ __('Explore all endpoints in this module') }}</p>
                                 <div class="flex items-center flex-wrap ">
                                     <a href="#"
                                         class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">{{ __('View Docs') }}
@@ -102,7 +102,7 @@
                             <div class="p-6">
                                 <h1 class="title-font text-lg font-medium text-gray-900 mb-3 dark:text-white">{{ __('Categories') }}
                                 </h1>
-                                <p class="leading-relaxed mb-3">Explora todos los endpoints del modulo de productos</p>
+                                <p class="leading-relaxed mb-3">{{ __('Explore all endpoints in this module') }}</p>
                                 <div class="flex items-center flex-wrap ">
                                     <a href="#"
                                         class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">{{ __('View Docs') }}
@@ -120,7 +120,7 @@
                             <div class="p-6">
                                 <h1 class="title-font text-lg font-medium text-gray-900 mb-3 dark:text-white">{{ __('Users') }}
                                 </h1>
-                                <p class="leading-relaxed mb-3">Explora todos los endpoints del modulo de productos</p>
+                                <p class="leading-relaxed mb-3">{{ __('Explore all endpoints in this module') }}</p>
                                 <div class="flex items-center flex-wrap ">
                                     <a href="#"
                                         class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">{{ __('View Docs') }}
