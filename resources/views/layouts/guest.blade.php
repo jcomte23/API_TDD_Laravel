@@ -26,7 +26,7 @@
                     <img id="logo" class="w-auto h-6 sm:h-7" alt="logo">
                 </a>
                 <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
-                        href="{{ route('home') }}">{{ __('Home') }}</a>
+                    href="{{ route('home') }}">{{ __('Home') }}</a>
                 <!-- Mobile menu button -->
                 <div class="flex lg:hidden md:hidden">
                     <button x-cloak @click="isOpen = !isOpen" type="button"
@@ -98,11 +98,11 @@
         </div>
     </nav>
 
-    <div class="font-sans w-full mt-16 bg-gray-100 text-gray-900 dark:text-gray-100 dark:bg-gray-900 antialiased">
+    <div class="font-sans w-full mt-16 bg-gray-200 text-gray-900 dark:text-gray-100 dark:bg-gray-900 antialiased">
         {{ $slot }}
     </div>
 
-    <footer class="bg-gray-100 dark:bg-gray-900">
+    <footer class="bg-gray-200 dark:bg-gray-900">
         <div class="container px-6 py-8 mx-auto">
             <div class="flex flex-col items-center text-center">
                 <a href="https://javiercombita.com" target="_black">
