@@ -8,13 +8,12 @@
 
             <span
                 class="text-transparent bg-gradient-to-tr bg-clip-text from-blue-500 via-pink-500 to-red-500 dark:from-sky-300 dark:via-pink-300 dark:to-red-500">
-                Rest V1
+                Rest
             </span>
         </h1>
 
         <p class="max-w-3xl mx-auto mt-6 text-lg text-center text-gray-700 dark:text-white md:text-xl">
-            Explora y utiliza los diversos módulos de nuestra API REST para satisfacer tus necesidades de desarrollo de
-            manera eficiente y personalizada.
+            {{ __('WelcomeText') }}
         </p>
 
         <section class="container px-6 py-10 mx-auto">
@@ -83,7 +82,7 @@
                                 src="https://th.bing.com/th/id/OIP.ekWUiBouFunNqguGwNh5uwHaEk?pid=ImgDet&rs=1"
                                 alt="blog">
                             <div class="p-6">
-                                <h1 class="title-font text-lg font-medium text-gray-900 mb-3 dark:text-white">Products
+                                <h1 class="title-font text-lg font-medium text-gray-900 mb-3 dark:text-white">{{ __('Products') }}
                                 </h1>
                                 <p class="leading-relaxed mb-3">Explora todos los endpoints del modulo de productos</p>
                                 <div class="flex items-center flex-wrap ">
@@ -101,7 +100,7 @@
                                 src="https://www.nobbot.com/wp-content/uploads/2017/04/etiqueta-categoria-920x515.jpg"
                                 alt="blog">
                             <div class="p-6">
-                                <h1 class="title-font text-lg font-medium text-gray-900 mb-3 dark:text-white">Categorias
+                                <h1 class="title-font text-lg font-medium text-gray-900 mb-3 dark:text-white">{{ __('Categories') }}
                                 </h1>
                                 <p class="leading-relaxed mb-3">Explora todos los endpoints del modulo de productos</p>
                                 <div class="flex items-center flex-wrap ">
@@ -119,7 +118,7 @@
                                 src="https://www.contpaqi.com/Thu%20Mar%2016%202023-3.png"
                                 alt="blog">
                             <div class="p-6">
-                                <h1 class="title-font text-lg font-medium text-gray-900 mb-3 dark:text-white">Usuarios
+                                <h1 class="title-font text-lg font-medium text-gray-900 mb-3 dark:text-white">{{ __('Users') }}
                                 </h1>
                                 <p class="leading-relaxed mb-3">Explora todos los endpoints del modulo de productos</p>
                                 <div class="flex items-center flex-wrap ">

@@ -1,14 +1,18 @@
 {
     "All Rights Reserved":"Todos los derechos reservados",
+    "Categories":"Categorías",
     "Easy to use":"Facilidad de uso",
     "Elegant Dark Mode":"Elegante modo oscuro",
     "Fully Responsive Components":"Componentes totalmente adaptativos",
     "Home":"Home",
     "Simple and clean designs":"Diseños sencillos y limpios",
+    "Products":"Productos",
     "TextCardEasyToUse":"Con la API REST, simplificamos cada paso para que pueda trabajar con eficiencia y eficacia. Desde la integración inicial hasta el mantenimiento continuo, te proporcionamos las herramientas que necesitas para que tu experiencia no tenga complicaciones.",
     "TextCardElegantDarkMode":"La elegante interfaz en modo oscuro está diseñada para deleitar tus sentidos y proporcionarte comodidad en cualquier entorno, tanto de día como de noche.Disfruta de una estética moderna y cautivadora mientras exploras todas las posibilidades que te ofrece la API.",
     "TextCardSimpleAndCleanDesigns":"Hemos eliminado el desorden innecesario para ofrecerte una experiencia sin distracciones. Cada aspecto de nuestra API REST ha sido meticulosamente diseñado para ser intuitivo y fácil de entender. Encajará perfectamente en tus proyectos sin importar la complejidad, manteniendo la elegancia y la claridad en el centro de todo.",
     "TextCardFullyResponsiveComponents":"Nuestros componentes son totalmente responsivos, lo que significa que se adaptan perfectamente a cualquier dispositivo o pantalla para disfrutar de una experiencia sin fisuras. Nos enorgullecemos de ofrecer componentes que se ajustan y funcionan con fluidez en cualquier entorno, brindándote la versatilidad que necesitas para hacer que tus aplicaciones destaquen.",
+    "Users":"Usuarios",
+    "WelcomeText":"Explore y utilice los distintos módulos de mi API REST para satisfacer sus necesidades de desarrollo de forma eficiente y personalizada.",
 
     "(and :count more error)": "(y :count error más)",
     "(and :count more errors)": "(y :count errores más)",
