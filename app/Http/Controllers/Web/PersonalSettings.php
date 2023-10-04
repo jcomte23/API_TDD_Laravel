@@ -7,14 +7,19 @@ use Illuminate\Http\Request;
 
 class PersonalSettings extends Controller
 {
-    public function welcome()
-    {
-        return view('welcome');
-    }
-
     public function dashboard()
     {
         return view('dashboard');
+    }
+
+    public function products()
+    {
+        return view('products.guest');
+    }
+
+    public function welcome()
+    {
+        return view('welcome');
     }
 
     public function setLang(string $locale)

@@ -16,6 +16,7 @@ use Laravel\Jetstream\Rules\Role;
 */
 
 Route::get('/',[PersonalSettings::class,'welcome'])->name('home');
+Route::get('/products',[PersonalSettings::class,'products'])->name('products');
 Route::get("locale/{locale}",[PersonalSettings::class,'setLang'])->name('lang');
 
 Route::middleware([

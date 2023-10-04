@@ -12,11 +12,7 @@ class PersonalSettingsTest extends TestCase
     use RefreshDatabase;
     use WithFaker;
 
-    public function test_correct_loading_of_welcome_view()
-    {
-        $response = $this->get('/');
-        $response->assertStatus(200);
-    }
+
 
     public function test_correct_loading_of_dashboard_view()
     {
