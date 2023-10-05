@@ -2,7 +2,7 @@
     <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
         <div class="flex items-center justify-between">
             <a href="{{ route('home') }}">
-                <img id="logo" class="w-auto h-6 sm:h-7" alt="logo">
+                <img class="logo w-auto h-6 sm:h-7" alt="logo">
             </a>
             <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
                 href="{{ route('home') }}">{{ __('Home') }}</a>

@@ -3,8 +3,8 @@ import './bootstrap';
 document.getElementById('modoDarkBtn').addEventListener('click', function () {
     const html = document.querySelector('html');
     const icon = document.querySelector('#modoDarkBtn i'); // Seleccione el ícono dentro del botón
-    let imgLogo=document.getElementById('logo')
-    let imgMarca=document.getElementById('marca')
+    let imgLogo=document.querySelector('.logo')
+    let imgMarca=document.querySelector('.marca')
 
     if (html.classList.contains('dark')) {
         // Cambiar a modo claro
@@ -29,8 +29,8 @@ document.getElementById('modoDarkBtn').addEventListener('click', function () {
 const modoAlmacenado = localStorage.getItem('modo');
 const html = document.querySelector('html');
 const icon = document.querySelector('#modoDarkBtn i'); // Seleccione el ícono dentro del botón
-let imgLogo=document.getElementById('logo')
-let imgMarca=document.getElementById('marca')
+let imgLogo=document.querySelector('.logo')
+let imgMarca=document.querySelector('.marca')
 
 if (modoAlmacenado === 'dark') {
     html.classList.add('dark');

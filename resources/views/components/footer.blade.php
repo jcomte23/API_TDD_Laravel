@@ -1,8 +1,8 @@
-<footer class="bg-gray-200 dark:bg-gray-900">
+<footer class="bg-gray-100 dark:bg-gray-900">
     <div class="container px-6 py-8 mx-auto">
         <div class="flex flex-col items-center text-center">
             <a href="https://javiercombita.com" target="_black">
-                <img id="marca" class="w-auto h-24" alt="marca">
+                <img class="marca w-auto h-24" alt="marca">
             </a>
         </div>
 
